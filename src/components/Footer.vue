@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>Make your Veg Burguer &copy; 2023</p>
+        <p>Make Your Veg Burger &copy; 2023</p>
     </footer>
 </template>
 
