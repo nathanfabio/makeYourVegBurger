@@ -26,7 +26,7 @@ export default {
         color: #fff;
         text-align: center;
         font-size: 3.75rem;
-        background-color: #222;
+        background-color: #222222af;
         padding: 1.25rem 2.5rem;
         border-radius: 0 .5rem .5rem 0;
     }

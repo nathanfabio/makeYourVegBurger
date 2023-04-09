@@ -1,80 +1,80 @@
 {
-"ingredientes": {
-"paes": [
+"ingredients": {
+"breads": [
     {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "type": "White Italian"
     },
     {
         "id": 2,
-        "tipo": "3 Queijos"
+        "type": "3 Cheeses"
     },
     {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "type": "Parmesan and Oregano"
     },
     {
         "id": 4,
-        "tipo": "Integral"
+        "type": "Whole wheat"
     }
     ],
-    "carnes": [
+    "meats": [
     {
         "id": 1,
-        "tipo": "Fazenda Futuro"
+        "type": "Fazenda Futuro"
     },
     {
         "id": 2,
-        "tipo": "Sora"
+        "type": "Sora"
     },
     {
         "id": 3,
-        "tipo": "Beyond meat"
+        "type": "Beyond meat"
     },
     {
         "id": 4,
-        "tipo": "NotCo"
+        "type": "NotCo"
     }
     ],
-    "opcionais": [
+    "options": [
     {
         "id": 1,
-        "tipo": "Toffu"
+        "type": "Toffu"
     },
     {
         "id": 2,
-        "tipo": "Cheddar"
+        "type": "Cheddar"
     },
     {
         "id": 3,
-        "tipo": "Beringela"
+        "type": "Beringela"
     },
     {
         "id": 4,
-        "tipo": "Tomate"
+        "type": "Tomato"
     },
     {
         "id": 4,
-        "tipo": "Cebola roxa"
+        "type": "Purple onion"
     },
     {
         "id": 4,
-        "tipo": "Pepino"
+        "type": "Cucumber"
     }
     ]
 },
 "status": [
     {
     "id": 1,
-    "tipo": "Solicitado"
+    "type": "Requested"
     },
     {
     "id": 2,
-    "tipo": "Em produção"
+    "type": "In production"
     },
     {
     "id": 3,
-    "tipo": "Finalizado"
+    "type": "Finished"
     }
 ],
 "burgers": []
