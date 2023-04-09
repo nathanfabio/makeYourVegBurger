@@ -1,4 +1,4 @@
-# make_your_veg_burguer
+# make_your_veg_burger
 
 ## Project setup
 ```
