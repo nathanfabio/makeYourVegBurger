@@ -10,14 +10,14 @@
                 <div class="inputContainer">
                     <label for="bread">Choose the bread:</label>
                     <select name="bread" id="bread" v-model="bread" required>
-                        <option value="" disabled selected>Choose your bread</option>
+                        <option value="chooseYourBread" disabled hidden>Choose your bread</option>
                         <option v-for="bread in breads" :key="bread.id" :value="bread.type">{{ bread.type }}</option>
                     </select>
                 </div>
                 <div class="inputContainer">
                     <label for="meat">Choose the meat:</label>
                     <select name="meat" id="meat" v-model="meat">
-                        <option value="">Choose your meat</option>
+                        <option value="chooseYourMeat" disabled hidden>Choose your meat</option>
                         <option v-for="meat in meats" :key="meat.id" :value="meat.type">{{ meat.type }}</option>
                     </select>
                 </div>
@@ -45,8 +45,8 @@ export default {
             meats: null,
             optionsdata: null,
             name: null,
-            bread: null,
-            meat: null,
+            bread: "chooseYourBread",
+            meat: "chooseYourMeat",
             options: [],
             status: "Requested",
             msg: null
@@ -89,11 +89,31 @@ export default {
         border-left: 0.25rem solid #fcba03;
     }
 
-    input, select {
-        padding: 0.3rem 0.6rem;
-        width: 18.75rem;
+    input {
+        border: none;
+        border-bottom: .15rem solid #fcba0385;
     }
 
+    input:focus {
+        outline: none;
+        border-bottom: .15rem solid #fcba03;
+    }
+
+    input, select {
+        padding: 0.5rem 0.6rem;
+        width: 18.75rem;
+        font-size: 1rem;
+    }
+    
+    select {
+        border-radius: 1rem;
+        border: .15rem solid #fcba03;
+    }
+
+    select:focus {
+        outline: none;
+    }
+    
     #optionsContainer {
         flex-direction: row;
         flex-wrap: wrap;
