@@ -1,81 +1,94 @@
 {
-"ingredients": {
-"breads": [
-    {
+  "ingredients": {
+    "breads": [
+      {
         "id": 1,
         "type": "White Italian"
-    },
-    {
+      },
+      {
         "id": 2,
         "type": "3 Cheeses"
-    },
-    {
+      },
+      {
         "id": 3,
         "type": "Parmesan and Oregano"
-    },
-    {
+      },
+      {
         "id": 4,
         "type": "Whole wheat"
-    }
+      }
     ],
     "meats": [
-    {
+      {
         "id": 1,
         "type": "Fazenda Futuro"
-    },
-    {
+      },
+      {
         "id": 2,
         "type": "Sora"
-    },
-    {
+      },
+      {
         "id": 3,
         "type": "Beyond meat"
-    },
-    {
+      },
+      {
         "id": 4,
         "type": "NotCo"
-    }
+      }
     ],
     "options": [
-    {
+      {
         "id": 1,
         "type": "Toffu"
-    },
-    {
+      },
+      {
         "id": 2,
         "type": "Cheddar"
-    },
-    {
+      },
+      {
         "id": 3,
         "type": "Beringela"
-    },
-    {
+      },
+      {
         "id": 4,
         "type": "Tomato"
-    },
-    {
+      },
+      {
         "id": 4,
         "type": "Purple onion"
-    },
-    {
+      },
+      {
         "id": 4,
         "type": "Cucumber"
-    }
+      }
     ]
-},
-"status": [
+  },
+  "status": [
     {
-    "id": 1,
-    "type": "Requested"
+      "id": 1,
+      "type": "Requested"
     },
     {
-    "id": 2,
-    "type": "In production"
+      "id": 2,
+      "type": "In production"
     },
     {
-    "id": 3,
-    "type": "Finished"
+      "id": 3,
+      "type": "Finished"
     }
-],
-"burgers": []
+  ],
+  "burgers": [
+    {
+      "name": "nathan",
+      "meat": "NotCo",
+      "bread": "Parmesan and Oregano",
+      "options": [
+        "Beringela",
+        "Toffu",
+        "Purple onion"
+      ],
+      "status": "Requested",
+      "id": 1
+    }
+  ]
 }

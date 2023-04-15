@@ -2,7 +2,7 @@
     <div>
         <p>Message</p>
         <div>
-            <form id="burgerForm">
+            <form id="burgerForm" @submit="createBurger">
                 <div class="inputContainer">
                     <label for="name">Customer's name:</label>
                     <input type="text" id="name" name="name" v-model="name" placeholder="Write your name">
@@ -48,7 +48,6 @@ export default {
             bread: "chooseYourBread",
             meat: "chooseYourMeat",
             options: [],
-            status: "Requested",
             msg: null
         }
     },
@@ -61,6 +60,33 @@ export default {
             this.breads = data.breads;
             this.meats = data.meats;
             this.optionsdata = data.options;
+        },
+
+        async createBurger(e) {
+            e.preventDefault();
+
+            const data = {
+                name: this.name,
+                meat: this.meat,
+                bread: this.bread,
+                options: Array.from(this.options),
+                status: "Requested"
+            }
+
+            const dataJSON = JSON.stringify(data);
+
+            const req = await fetch("http://localhost:3000/burgers", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: dataJSON
+            });
+
+            const res = await req.json();
+
+            this.name = "";
+            this.bread = "";
+            this.meat = "";
+            this.options = "";
         }
     },
     mounted() {
@@ -146,7 +172,6 @@ export default {
         border: 0.1rem solid #222;
         padding: 0.6rem;
         font-size: 1rem;
-        margin: 0 auto;
         border-radius: .5rem;
         cursor: pointer;
         transition: .8s;
