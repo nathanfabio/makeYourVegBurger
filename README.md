@@ -2,8 +2,8 @@
 First project in Vue. Made together with youtuber Matheus Battisti.
 
 # Screenshots
-<img src="ScreenchotBurger1.png" alt="Screenshot Home">
-<img src="ScreenchotBurger2.png" alt="Screenshot Orders">
+<img src="ScreenshotBurger1.png" alt="Screenshot Home">
+<img src="ScreenshotBurger2.png" alt="Screenshot Orders">
 
 ## Project setup
 ```
