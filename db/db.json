@@ -77,17 +77,5 @@
       "type": "Finished"
     }
   ],
-  "burgers": [
-    {
-      "name": "fabio",
-      "meat": "Beyond meat",
-      "bread": "Parmesan and Oregano",
-      "options": [
-        "Toffu",
-        "Beringela"
-      ],
-      "status": "Finished",
-      "id": 2
-    }
-  ]
+  "burgers": []
 }
