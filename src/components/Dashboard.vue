@@ -1,5 +1,6 @@
 <template>
     <div id="burgerTable">
+        <Message :msg="msg" v-show="msg" />
         <div>
             <div id="burgerTableHeading">
                 <div class="orderId">#:</div>
@@ -22,8 +23,8 @@
                     </ul>
                 </div>
                 <div>
-                    <select name="status" class="status">
-                        <option v-for="s in status" :key="s.id" value="s.type" :selected="burger.status == s.type">{{ s.type }}</option>
+                    <select name="status" class="status" @change="updatedBurger($event, burger.id)">
+                        <option v-for="s in status" :key="s.id" :value="s.type" :selected="burger.status == s.type">{{ s.type }}</option>
                     </select>
                     <button class="deleteBtn" @click="deleteBurger(burger.id)">Cancel</button>
                 </div>
@@ -33,14 +34,19 @@
 </template>
 
 <script>
+import Message from './Message.vue'
 export default {
     name: "Dashboard",
     data() {
         return {
             burgers: null,
             burgerId: null,
-            status: []
+            status: [],
+            msg: null
         }
+    },
+    components: {
+        Message
     },
     methods: {
         async getOrders() {
@@ -67,7 +73,32 @@ export default {
 
             const res = await req.json();
 
+            //status message
+            this.msg = `Order successfully removed!`;
+
+            //clear message
+            setTimeout(() => this.msg = "", 3000);
+
             this.getOrders();
+        },
+        async updatedBurger(event, id) {
+            const option = event.target.value;
+
+            const dataJson = JSON.stringify({ status: option });
+
+            const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: dataJson
+            });
+
+            const res = await req.json();
+
+            //status message
+            this.msg = `Order N°${res.id} has been updated to "${res.status}"!`;
+
+            //clear message
+            setTimeout(() => this.msg = "", 3000);
         }
     },
     mounted() {
