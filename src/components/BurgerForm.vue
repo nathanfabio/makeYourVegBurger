@@ -24,8 +24,8 @@
                 <div id="optionsContainer" class="inputContainer">
                     <label id="optionsTitle" for="optional">Choose the options:</label>
                     <div class="checkboxContainer" v-for="optional in optionsdata" :key="optional.id">
-                        <input type="checkbox" name="options" v-model="options" :value="optional.type">
-                        <span>{{ optional.type }}</span>
+                        <input :id="optional.id" type="checkbox" name="options" v-model="options" :value="optional.type">
+                        <label :for="optional.id">{{ optional.type }}</label>
                     </div>
                 </div>
                 <div class="inputContainer">
@@ -92,9 +92,9 @@ export default {
 
             //clear the fields
             this.name = "";
-            this.bread = "";
-            this.meat = "";
-            this.options = "";
+            this.bread = "chooseYourBread";
+            this.meat = "chooseYourMeat";
+            this.options = [];
         }
     },
     mounted() {
@@ -167,13 +167,21 @@ export default {
         margin-bottom: 1.25rem;
     }
 
-    .checkboxContainer span, .checkboxContainer input {
+    .checkboxContainer label, .checkboxContainer input {
         width: auto;
     }
 
-    .checkboxContainer span {
-        margin-left: 0.3rem;
+    .checkboxContainer label {
+        padding: 0 .3rem;
         font-weight: bold;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type=checkbox] {
+        cursor: pointer;
+        width: 1rem;
+        height: 1rem;
     }
 
     .submitBtn {
