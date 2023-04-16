@@ -77,54 +77,5 @@
       "type": "Finished"
     }
   ],
-  "burgers": [
-    {
-      "name": "nathan",
-      "meat": "NotCo",
-      "bread": "Parmesan and Oregano",
-      "options": [
-        "Beringela",
-        "Toffu",
-        "Purple onion"
-      ],
-      "status": "Requested",
-      "id": 1
-    },
-    {
-      "name": "Fabio",
-      "meat": "Sora",
-      "bread": "Whole wheat",
-      "options": [
-        "Cucumber"
-      ],
-      "status": "Requested",
-      "id": 2
-    },
-    {
-      "name": "Henrique",
-      "meat": "Beyond meat",
-      "bread": "Parmesan and Oregano",
-      "options": [
-        "Tomato",
-        "Cheddar"
-      ],
-      "status": "Requested",
-      "id": 3
-    },
-    {
-      "name": "Cristiano Ronaldo",
-      "meat": "Beyond meat",
-      "bread": "Parmesan and Oregano",
-      "options": [
-        "Beringela",
-        "Purple onion",
-        "Toffu",
-        "Cheddar",
-        "Tomato",
-        "Cucumber"
-      ],
-      "status": "Requested",
-      "id": 4
-    }
-  ]
+  "burgers": []
 }
